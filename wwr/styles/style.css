@@ -1,107 +1,171 @@
+/* Font Imports */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
 /* General Styles */
 body {
-    background-color: #7dcfb6; /* Body background color */
+    background-color: #7dcfb6;
+    font-family: 'Montserrat Alternates', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    font-size: 22px;
+}
+
+h2 {
+    margin: 0;
+}
+
+.home-title, h2 {
+    font-family: 'Montserrat', Arial, sans-serif;
+}
+
+.home-title {
+    font-size: 1.5em; /* Adjusted font size */
+    margin-top: 10px;
+}
+
+.book, .join {
+    font-size: 18px;
+    padding: 15px 30px;
+    margin-top: 50px;
+    border-radius: 5px;
+    background-color: #d9c2a3;
+    color: black;
+    text-decoration: none;
+}
+
+.msg p {
+    font-size: 0.8em;
+    padding-bottom: 15px;
+}
+
+.msg {
+    background-color: #6f7364;
+    line-height: 1.5em;
+    padding: 35px;
+}
+
+/* Navigation Styles */
+nav {
+    /* Removed background-color */
+    display: flex; /* Use flexbox */
+    align-items: center; /* Center vertically */
+    justify-content: flex-end; /* Align to the right */
+    margin-right: 20px; /* Add some margin to separate from the logo */
+}
+
+nav a {
+    padding: 15px 20px; /* Added padding */
+    text-align: center;
+    color: #f79256;
+    text-decoration: none;
+    transition: background-color 0.3s; /* Added transition */
+}
+
+nav a:hover {
+    background-color: #396E94; /* Changed hover background color */
+    color: white;
+}
+
+/* Additional Footer Styles */
+footer p {
+    font-size: 1.2em;
+}
+
+footer p a:hover {
+    text-decoration: underline;
 }
 
 /* Container Styles */
 #content {
     max-width: 1600px;
-    margin: 0 auto; /* Centers content horizontally */
+    margin: 0 auto;
 }
 
+/* Background Styles */
 #background {
     height: 725px;
-    background-color: #fbd1a2; /* Background color for the background container */
+    background-color: #fbd1a2;
 }
 
 /* Header Styles */
 header {
-    background-color: rgba(0, 0, 0, 0.5); /* Header background color */
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
-/* Navigation Styles */
-nav a {
-    text-align: center; /* Centers text within navigation links */
-    color: #f79256; /* Text color for navigation links */
-    text-decoration: none; /* Remove underline */
+/* Icon Styles */
+.icon {
+    padding-top: 10px;
 }
 
-nav a:hover {
-    background-color: #396E94; /* Hover background color for navigation links */
-    color: white; /* Text color on hover for navigation links */
+/* Card Styles */
+.rivers-card, .camping-card, .rapids-card {
+    margin: 200px 0;
+}
+
+/* Footer Styles */
+footer {
+    padding: 25px 50px;
+    margin-top: 200px;
+    background-color: #1d4e89;
+    color: white;
+}
+
+footer .social img {
+    padding-top: 15px;
+}
+
+/* Card Image Styles */
+.card-img {
+    border: 10px solid #000000;
 }
 
 /* Main Content Styles */
+main img {
+    box-sizing: border-box;
+}
+
 main section {
-    text-align: center; /* Centers content within sections inside main */
+    text-align: center;
 }
 
 #hero-msg h1,
 #hero-msg h4 {
-    text-align: center; /* Centers text within h1 and h4 elements */
+    text-align: center;
 }
 
 .button-box {
-    text-align: center; /* Centers content within .button-box */
+    text-align: center;
 }
 
 /* Button Styles */
 .book,
 .join {
-    background-color: #f79256; /* Button primary color */
-    color: white; /* Text color for buttons */
-    text-decoration: none; /* Remove underline */
+    background-color: #f79256;
+    color: white;
+    text-decoration: none;
 }
 
 .book:hover,
 .join:hover {
-    background-color: #fbd1a2; /* Button hover color */
+    background-color: #fbd1a2;
 }
 
 /* Message Section Styles */
-.msg {
-    background-color: #7dcfb6; /* Message section background color */
-}
-
 .msg h2 {
-    color: #f79256; /* Text color for message section heading */
+    color: #f79256;
 }
 
 .msg p {
-    color: #7dcfb6; /* Text color for message section paragraph */
-}
-
-/* Footer Styles */
-footer {
-    background-color: #1d4e89; /* Footer background color */
-    color: white; /* Text color for footer */
-}
-
-footer a {
-    color: #f79256; /* Text color for footer links */
-    text-decoration: none; /* Remove underline */
-}
-
-footer a:hover {
-    color: #fbd1a2; /* Text color on hover for footer links */
+    color: #7dcfb6;
 }
 
 /* Logo and Icon Styles */
-.logo,
-.icon {
-    width: 80px; /* Width for the logo and all card icons */
+.logo {
+    width: 80px;
+    float: left; /* Aligns logo to the left */
 }
 
 /* Hero Image Styles */
 #hero-img {
-    width: 100%; /* Responsive width for the hero image */
-}
-
-/* Additional Footer Styles */
-footer p {
-    font-size: 1.2em; /* Larger font size */
-}
-
-footer p a:hover {
-    text-decoration: underline; /* Add underline on hover for footer links within paragraphs */
+    width: 100%;
 }
