@@ -233,6 +233,11 @@ main section {
     border-radius: 10px;
 }
 
+.text {
+    color: #f79256;
+    
+}
+
 /* Message Section Styles */
 .msg h2 {
     color: #f79256;
