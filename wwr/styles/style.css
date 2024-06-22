@@ -124,11 +124,13 @@ nav a {
     color: #f79256;
     text-decoration: none;
     transition: background-color 0.3s; /* Added transition */
+    border-radius: 10px;
 }
 
 nav a:hover {
     background-color: #396E94; /* Changed hover background color */
     color: white;
+    
 }
 
 /* Additional Footer Styles */
@@ -216,6 +218,19 @@ main section {
 .book:hover,
 .join:hover {
     background-color: #fbd1a2;
+}
+
+.header-box {
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    
+}
+
+.utah {
+    /* display: none; */
+    color: #f79256;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
 }
 
 /* Message Section Styles */
