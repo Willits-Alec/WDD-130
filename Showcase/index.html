@@ -1,16 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Alec J Willits - Portfolio | Home</title>
     <link rel="stylesheet" href="/styles/small.css">
-    <link rel="stylesheet" href="/styles/large.css">
+    <link rel="stylesheet" href="styles/large.css">
 </head>
+
 <body>
     <section class="navbar">
         <div class="logo">
-            <img src="./images/logo.JPG" alt="Logo for the Portfolio website" width="10%">
+            <img src="images/logo.JPG" alt="Logo for the Portfolio website">
         </div>
 
         <nav class="nav-links">
@@ -22,32 +24,44 @@
 
     <div class="container">
         <header>
-            <section class="hero">
-                <img src="./images/Hero.png" alt="Programming Brands Collage" width="50%">
-                <h1>Welcome to My Portfolio</h1>
-                <p>Explore my diverse range of projects, delve into my professional background, and feel free to reach out for collaborations or inquiries. Discover the skills and creativity that drive my work.</p>
+            <section class="hero-image">
+                <img src="images/Hero.png" alt="Programming Brands Collage">
+                <div class="hero-text">
+                    <h1>Welcome to My Portfolio</h1>
+                    <p>Explore my diverse range of projects, delve into my professional background, and feel free to
+                        reach out for collaborations or inquiries. Discover the skills and creativity that drive my
+                        work.</p>
+                </div>
             </section>
         </header>
-        
+
         <main>
-            <section class="showcase">
-                <div class="primary-section-title">
-                    <h2>My Creative Journey</h2>
-                </div>
-                <div class="primary-section-description">
-                    <p>Explore my portfolio to see examples of my work. Each project in this gallery showcases my technical expertise, innovative thinking, and commitment to delivering high-quality results. You'll find detailed descriptions, project outcomes, and the technologies I used, providing a comprehensive view of my creative and professional journey.</p>
-                </div>
+            <section class="pages">
+                <section class="showcase">
+                    <div class="primary-section-title">
+                        <h2>My Creative Journey</h2>
+                    </div>
+                    <div class="primary-section-description">
+                        <p>Explore my portfolio to see examples of my work. Each project in this gallery showcases my
+                            technical expertise, innovative thinking, and commitment to delivering high-quality results.
+                            You'll find detailed descriptions, project outcomes, and the technologies I used, providing
+                            a comprehensive view of my creative and professional journey.</p>
+                    </div>
+                </section>
+
+                <section class="qualifications">
+                    <div class="secondary-section-title">
+                        <h2>Background and Qualifications</h2>
+                    </div>
+                    <div class="secondary-section-description">
+                        <p>Delve into my background to learn about my skills, professional achievements, and
+                            qualifications. This section highlights my journey, showcasing the expertise and
+                            accomplishments that make me a valuable asset in any project. A user-friendly contact form
+                            is also available for inquiries, collaborations, or hiring opportunities.</p>
+                    </div>
+                </section>
             </section>
 
-            <section class="qualifications">
-                <div class="secondary-section-title">
-                    <h2>Background and Qualifications</h2>
-                </div>
-                <div class="secondary-section-description">
-                    <p>Delve into my background to learn about my skills, professional achievements, and qualifications. This section highlights my journey, showcasing the expertise and accomplishments that make me a valuable asset in any project. A user-friendly contact form is also available for inquiries, collaborations, or hiring opportunities.</p>
-                </div>
-            </section>
-        
             <section class="skills">
                 <h2>Skills</h2>
                 <ul>
@@ -68,14 +82,15 @@
                     <li>Customer Support</li>
                 </ul>
             </section>
-            
+
 
             <section class="contact">
                 <div class="contact-section-title">
                     <h2>Contact Me</h2>
                 </div>
                 <div class="contact-section-description">
-                    <p>If you'd like to get in touch, feel free to reach out via email or connect with me on LinkedIn.</p>
+                    <p>If you'd like to get in touch, feel free to reach out via email or connect with me on LinkedIn.
+                    </p>
                     <form id="contactForm">
                         <label for="name">Name:</label>
                         <input type="text" id="name" name="name" required>
@@ -85,10 +100,11 @@
                         <textarea id="message" name="message" required></textarea>
                         <button type="submit">Submit</button>
                     </form>
-                    <p id="confirmationMessage" style="display: none;">Thank you for your message! I will get back to you soon.</p>
+                    <p id="confirmationMessage" style="display: none;">Thank you for your message! I will get back to
+                        you soon.</p>
                 </div>
             </section>
-            
+
         </main>
 
         <footer>
@@ -101,9 +117,9 @@
             </p>
         </footer>
     </div>
-    
+
     <script>
-        document.getElementById('contactForm').addEventListener('submit', function(event) {
+        document.getElementById('contactForm').addEventListener('submit', function (event) {
             event.preventDefault(); // Prevent the default form submission
 
             // Display the confirmation message
@@ -114,4 +130,5 @@
         });
     </script>
 </body>
+
 </html>
