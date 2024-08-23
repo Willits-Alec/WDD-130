@@ -90,7 +90,7 @@
                 <div class="contact-section-description">
                     <p>If you'd like to get in touch, feel free to reach out via email or connect with me on LinkedIn.
                     </p>
-                    <form id="contactForm" action="https://script.google.com/macros/s/AKfycbw5T7Kp8NDWM_faNDNDG8loQhfzdrGZhKlM_Lm1msGdbYKLeGcMbX0tpPTPH99oLAux/exec" method="POST">
+                    <form id="contactForm" action="https://script.google.com/macros/s/AKfycbyDEb3KxFZkYWCiQj6MYxeaTtAQs4UUr63vRqdoiZRBxeURNpuw5cB5dh88RBSHGIAs/exec" method="POST">
                         <label for="name">Name:</label>
                         <input type="text" id="name" name="Name" required>
                         <label for="email">Email:</label>
@@ -137,7 +137,7 @@
             formData.append('Email', email);
             formData.append('Message', message);
         
-            fetch('https://script.google.com/macros/s/AKfycbw5T7Kp8NDWM_faNDNDG8loQhfzdrGZhKlM_Lm1msGdbYKLeGcMbX0tpPTPH99oLAux/exec', {
+            fetch('https://script.google.com/macros/s/AKfycbyDEb3KxFZkYWCiQj6MYxeaTtAQs4UUr63vRqdoiZRBxeURNpuw5cB5dh88RBSHGIAs/exec', {
                 method: 'POST',
                 body: formData
             }).then(response => response.json())
