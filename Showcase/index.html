@@ -90,13 +90,13 @@
                 <div class="contact-section-description">
                     <p>If you'd like to get in touch, feel free to reach out via email or connect with me on LinkedIn.
                     </p>
-                    <form id="contactForm">
+                    <form id="contactForm" action="https://script.google.com/macros/s/AKfycbxkIFMvVCNKD1LEYCYLRGFQ4V-xEG0wTTmccCb6nbGVXELl73TOYjj70gyd8fKa1W_A/exec" method="POST">
                         <label for="name">Name:</label>
-                        <input type="text" id="name" name="name" required>
+                        <input type="text" id="name" name="Name" required>
                         <label for="email">Email:</label>
-                        <input type="email" id="email" name="email" required>
+                        <input type="email" id="email" name="Email" required>
                         <label for="message">Message:</label>
-                        <textarea id="message" name="message" required></textarea>
+                        <textarea id="message" name="Message" required></textarea>
                         <button type="submit">Submit</button>
                     </form>
                     <p id="confirmationMessage" style="display: none;">Thank you for your message! I will get back to
@@ -118,16 +118,41 @@
     </div>
 
     <script>
-        document.getElementById('contactForm').addEventListener('submit', function (event) {
+        document.getElementById('contactForm').addEventListener('submit', function(event) {
             event.preventDefault(); // Prevent the default form submission
-
-            // Display the confirmation message
-            document.getElementById('confirmationMessage').style.display = 'block';
-
-            // Optionally, clear the form fields
-            document.getElementById('contactForm').reset();
+        
+            // Client-side sanitization
+            function sanitizeInput(input) {
+                const tempDiv = document.createElement('div');
+                tempDiv.textContent = input;
+                return tempDiv.innerHTML;
+            }
+        
+            const name = sanitizeInput(document.getElementById('name').value);
+            const email = sanitizeInput(document.getElementById('email').value);
+            const message = sanitizeInput(document.getElementById('message').value);
+        
+            var formData = new FormData();
+            formData.append('Name', name);
+            formData.append('Email', email);
+            formData.append('Message', message);
+        
+            fetch('YOUR_WEB_APP_URL', {
+                method: 'POST',
+                mode: 'no-cors',
+                body: formData
+            }).then(response => {
+                // Display the confirmation message
+                document.getElementById('confirmationMessage').style.display = 'block';
+        
+                // Optionally, clear the form fields
+                document.getElementById('contactForm').reset();
+            }).catch(error => {
+                alert('There was a problem with your submission. Please try again.');
+                console.error('Error:', error);
+            });
         });
-    </script>
+        </script>
 </body>
 
 </html>
