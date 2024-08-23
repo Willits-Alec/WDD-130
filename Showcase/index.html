@@ -90,7 +90,7 @@
                 <div class="contact-section-description">
                     <p>If you'd like to get in touch, feel free to reach out via email or connect with me on LinkedIn.
                     </p>
-                    <form id="contactForm" action="https://script.google.com/macros/s/AKfycbzthsbRnSNTlBpjZQWC1HraPDBzfmQi_zPq16UGnLCC07YdAe1amXMPhO-t0B7-RsV4/exec" method="POST">
+                    <form id="contactForm" action="https://script.google.com/macros/s/AKfycbw5T7Kp8NDWM_faNDNDG8loQhfzdrGZhKlM_Lm1msGdbYKLeGcMbX0tpPTPH99oLAux/exec" method="POST">
                         <label for="name">Name:</label>
                         <input type="text" id="name" name="Name" required>
                         <label for="email">Email:</label>
@@ -137,22 +137,28 @@
             formData.append('Email', email);
             formData.append('Message', message);
         
-            fetch('https://script.google.com/macros/s/AKfycbzthsbRnSNTlBpjZQWC1HraPDBzfmQi_zPq16UGnLCC07YdAe1amXMPhO-t0B7-RsV4/exec', {
+            fetch('https://script.google.com/macros/s/AKfycbw5T7Kp8NDWM_faNDNDG8loQhfzdrGZhKlM_Lm1msGdbYKLeGcMbX0tpPTPH99oLAux/exec', {
                 method: 'POST',
-                mode: 'no-cors',
                 body: formData
-            }).then(response => {
-                // Display the confirmation message
-                document.getElementById('confirmationMessage').style.display = 'block';
+            }).then(response => response.json())
+              .then(data => {
+                if (data.result === 'success') {
+                    // Display the confirmation message
+                    document.getElementById('confirmationMessage').style.display = 'block';
         
-                // Optionally, clear the form fields
-                document.getElementById('contactForm').reset();
+                    // Optionally, clear the form fields
+                    document.getElementById('contactForm').reset();
+                } else {
+                    alert('There was a problem with your submission. Please try again.');
+                    console.error('Error:', data.error);
+                }
             }).catch(error => {
                 alert('There was a problem with your submission. Please try again.');
                 console.error('Error:', error);
             });
         });
         </script>
+        
 </body>
 
 </html>
